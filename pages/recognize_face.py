@@ -52,8 +52,7 @@ def recognize_and_mark_attendance():
                     name = fetch_name_by_label(label)
                     st.session_state.recognized_name = name
                     st.session_state.num_frames_rec += 1
-                    print(f"Recognized: {name} with confidence: {confidence}")
-                    cv2.putText(frame, f"{name} ({confidence:.2f})", (x, y - 10),
+                    cv2.putText(frame, f"{name} ({100-confidence:.2f})", (x, y - 10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
                     cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
