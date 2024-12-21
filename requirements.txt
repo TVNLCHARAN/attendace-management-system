@@ -1,5 +1,5 @@
-streamlit
-opencv-python
-numpy
-pandas
-matplotlib
+streamlit>=1.25.0,<2.0.0
+opencv-contrib-python
+numpy==1.26.0
+pandas>=1.5.0,<2.0.0
+matplotlib>=3.6.0,<4.0.0

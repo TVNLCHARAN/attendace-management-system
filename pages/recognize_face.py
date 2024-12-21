@@ -11,7 +11,7 @@ if "num_frames_rec" not in st.session_state:
     st.session_state.num_frames_rec = 0
 if "recognized_name" not in st.session_state:
     st.session_state.recognized_name = None
-print('hi')
+
 cascade_path = os.path.join(os.path.dirname(__file__), '..', 'haarcascade_frontalface_default.xml')
 face_cascade = cv2.CascadeClassifier(cascade_path)
 recognizer = cv2.face.LBPHFaceRecognizer_create()
