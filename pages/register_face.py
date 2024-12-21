@@ -50,8 +50,6 @@ def train_model(name):
     db_faces = fetch_faces()
     label = len(db_faces) + 1
 
-    print(db_faces[-1][0], db_faces[-1][1])
-
     images = collect_images()
     for img in images:
         faces.append(img)
@@ -71,5 +69,8 @@ def train_model(name):
 if __name__ == "__main__":
     name = st.text_input("Enter name to record face")
     button = st.button("Register Face")
-    if button and name.strip() != "":
-        train_model(name)
+    if button:
+        if name.strip() != "":
+            train_model(name)
+        else:
+            stframe.error("Please enter a name")

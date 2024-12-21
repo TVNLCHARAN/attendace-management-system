@@ -21,7 +21,7 @@ def recognize_face(frame, gray, face_db):
     for (x, y, w, h) in faces:
         face = gray[y:y + h, x:x + w]
         label, confidence = recognizer.predict(face)
-        if confidence > 70:
+        if confidence < 70:
             name = face_db[label - 1][1]
             mark_attendance(name)
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
