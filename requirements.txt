@@ -1,6 +1,5 @@
 streamlit==1.25.0
 opencv-python-headless==4.5.5.62
-pandas==2.1.0
-numpy==1.25.0
-matplotlib==3.8.0
-Pillow==9.4.0
+numpy>=1.26.0
+pandas>=2.1.1
+matplotlib
